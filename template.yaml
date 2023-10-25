@@ -43,11 +43,10 @@ Resources:
       Policies:
         - SNSPublishMessagePolicy:
             TopicName: !GetAtt Approver1SNS.TopicName
-         - SNSPublishMessagePolicy:
+        - SNSPublishMessagePolicy:
             TopicName: !GetAtt Approver2SNS.TopicName
-         - SNSPublishMessagePolicy:
+        - SNSPublishMessagePolicy:
             TopicName: !GetAtt Approver3SNS.TopicName
-
 
 
 ##########################################################################
