@@ -42,9 +42,11 @@ Resources:
         Level: 'ALL'
       Policies:
         - SNSPublishMessagePolicy:
-            Approver1SNS: !GetAtt Approver1SNS.TopicName
-            Approver2SNS: !GetAtt Approver2SNS.TopicName
-            Approver3SNS: !GetAtt Approver3SNS.TopicName
+            TopicName: !GetAtt Approver1SNS.TopicName
+         - SNSPublishMessagePolicy:
+            TopicName: !GetAtt Approver2SNS.TopicName
+         - SNSPublishMessagePolicy:
+            TopicName: !GetAtt Approver3SNS.TopicName
 
 
 
