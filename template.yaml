@@ -30,9 +30,6 @@ Resources:
         Approver1SNS: !Ref Approver1SNS
         Approver2SNS: !Ref Approver2SNS
         Approver3SNS: !Ref Approver3SNS
-       
-      Role:
-        Fn::GetAtt: [ StatesExecutionRole, Arn ]
       Type: STANDARD
       Logging:
         Destinations:
