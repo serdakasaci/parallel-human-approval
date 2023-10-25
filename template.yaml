@@ -52,21 +52,21 @@ Resources:
   Approver1SNS:
     Type: AWS::SNS::Topic
     Properties:
-      TopicName: 'Approver1SNS'
+      TopicName: 'Approver1'
       Subscription:
         - Endpoint: 'kasacis@amazon.at'
           Protocol: email
   Approver2SNS:
     Type: AWS::SNS::Topic
     Properties:
-      TopicName: 'Approver2SNS'
+      TopicName: 'Approver2'
       Subscription:
         - Endpoint: 'kasacis@amazon.at'
           Protocol: email
   Approver3SNS:
     Type: AWS::SNS::Topic
     Properties:
-      TopicName: 'Approver3SNS'
+      TopicName: 'Approver3'
       Subscription:
         - Endpoint: 'kasacis@amazon.at'
           Protocol: email     
