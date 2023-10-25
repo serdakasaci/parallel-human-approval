@@ -27,9 +27,9 @@ Resources:
     Properties:
       DefinitionUri: statemachine/StateMachine.asl.json
       DefinitionSubstitutions:
-        Approver1SNS: !Ref Approver1SNS
-        Approver2SNS: !Ref Approver2SNS
-        Approver3SNS: !Ref Approver3SNS
+        TopicArn1: !Ref Approver1SNS
+        TopicArn2: !Ref Approver2SNS
+        TopicArn3: !Ref Approver3SNS
       Type: STANDARD
       #Logging:
       #  Destinations:
