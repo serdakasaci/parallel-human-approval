@@ -31,12 +31,12 @@ Resources:
         Approver2SNS: !Ref Approver2SNS
         Approver3SNS: !Ref Approver3SNS
       Type: STANDARD
-      Logging:
-        Destinations:
-          - CloudWatchLogsLogGroup:
-              LogGroupArn: !GetAtt StateMachineLogGroup.Arn
-        IncludeExecutionData: false
-        Level: 'ALL'
+      #Logging:
+      #  Destinations:
+      #    - CloudWatchLogsLogGroup:
+      #        LogGroupArn: !GetAtt StateMachineLogGroup.Arn
+      #  IncludeExecutionData: false
+      #  Level: 'ALL'
       Policies:
         - SNSPublishMessagePolicy:
             TopicName: !GetAtt Approver1SNS.TopicName
@@ -74,10 +74,10 @@ Resources:
 ##########################################################################
 #  STEP FUNCTION LOG GROUP                                               #
 ##########################################################################
-  StateMachineLogGroup:
-    Type: AWS::Logs::LogGroup
-    Properties:
-      LogGroupName: !Join [ "/", [ "stepfunctions", StateMachineParallelHumanAproval]]
+#  StateMachineLogGroup:
+#    Type: AWS::Logs::LogGroup
+#    Properties:
+#      LogGroupName: !Join [ "/", [ "stepfunctions", StateMachineParallelHumanAproval]]
             
 ##########################################################################
 #   Outputs                                                              #
